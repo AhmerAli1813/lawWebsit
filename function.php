@@ -128,7 +128,7 @@ function error404(){
                                             if(isset($_SESSION['unique_id'])){
                                                echo ' <li><a href="about.html">'.$_SESSION['Name'].'</a></li>
                                                <li class="has-dropdown">
-                                                <a href="profile.php"><img src="dist/img/'.$_SESSION["img"].'" width="50px" height="50px" style="border-radius:50% ;" alt=""></a>
+                                                <a href="profile.php?unique_id='.$_SESSION['unique_id'].'"><img src="dist/img/'.$_SESSION["img"].'" width="50px" height="50px" style="border-radius:50% ;" alt=""></a>
                                                <ul class="dropdown">
                                                    <li> <a href="profile.php?unique_id='.$_SESSION['unique_id'].'"><img src="dist/img/'.$_SESSION["img"].'" width="50px" height="50px" style="border-radius:50% ;" alt=""></a>
                                                    </li>

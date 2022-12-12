@@ -42,6 +42,44 @@
             </div>
             <!-- /.info-box -->
           </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon  bg-gradient-lightblue elevation-1"><i class="fas fa-graduation-cap"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text  text-capitalize">Admins</span>
+                <span class="info-box-number">
+                <?php  $AllUser=$db_conn->query("SELECT COUNT(*) as 'AllUser' FROM `register` where role_id ='1' ") ;
+                              
+                              $AllUser_result = mysqli_fetch_assoc($AllUser);
+                             echo "<h3>{$AllUser_result["AllUser"]}</h3>"; 
+                
+                ?>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon  bg-gradient-indigo elevation-1"><i class="fas fa-graduation-cap"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text  text-capitalize">new Lawyers</span>
+                <span class="info-box-number">
+                <?php  $AllUser=$db_conn->query("SELECT COUNT(*) as 'newLawyer' FROM `job_request` WHERE `status` = 'pending' ") ;
+                              
+                              $AllUser_result = mysqli_fetch_assoc($AllUser);
+                             echo "<h3>{$AllUser_result["newLawyer"]}</h3>"; 
+                
+                ?>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
@@ -49,7 +87,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text text-capitalize">Total Lawyers</span>
-                <?php  $lawyer=$db_conn->query("SELECT COUNT(*) as 'lawyer' FROM `register` where role_id = 2 ") ;
+                <?php  $lawyer=$db_conn->query("SELECT COUNT(*) as 'lawyer' FROM `job_request` WHERE `status` = 'approved' ") ;
                               
                               $lawyer_result = mysqli_fetch_assoc($lawyer);
                              echo "<h3>{$lawyer_result["lawyer"]}</h3>"; 

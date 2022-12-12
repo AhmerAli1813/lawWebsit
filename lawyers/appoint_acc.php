@@ -2,7 +2,8 @@
 include 'function.php';
 headers();
 include '../includes/config.php';
-$q = $db_conn->query("SELECT * FROM `approved_cases` WHERE `L_id` = 'lawyer_003'  AND `lawyer_status` = 'accepted' ");
+$uq_id = $_SESSION['unique_id'];
+$q = $db_conn->query("SELECT * FROM `approved_cases` WHERE `L_id` = '$uq_id'  AND `lawyer_status` = 'accepted' ");
 $output="";
 
 if(mysqli_num_rows($q) >0){
@@ -131,7 +132,7 @@ if(mysqli_num_rows($q) >0){
               
               <!-- /.card-header -->
               <!-- form start -->
-              <?php if(isset($_GET['invoice_id']))
+              <?php if(isset($_GET['app_id']))
               {
                echo  $form;
                $display = "block";

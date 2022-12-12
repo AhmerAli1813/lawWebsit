@@ -30,13 +30,13 @@ if (isset($_POST['login'])){
                 
                 
                 echo "<script>alert('You have Login as an Admin!')</script>";
-                        echo $_SESSION["role_id"] = $data["role_id"];
-                        echo $_SESSION["Name"] = $data["name"];
-                        echo $_SESSION["username"] = $data["username"];
-                        echo $_SESSION["unique_id"] = $data["unique_id"];
-                        echo $_SESSION["img"] = $data["profile"];
+                        $_SESSION["role_id"] = $data["role_id"];
+                        $_SESSION["Name"] = $data["name"];
+                        $_SESSION["username"] = $data["username"];
+                        $_SESSION["unique_id"] = $data["unique_id"];
+                         $_SESSION["img"] = $data["profile"];
                 if($data["role_id"]=="1"){
-                    header("Location:admins/index.php");
+                    header("Location:admin/index.php");
                     
                  exit();
              }elseif($data["role_id"] == "2"){

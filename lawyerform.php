@@ -35,12 +35,14 @@ if(isset($_POST['apply'])){
     }
 
     if (count($error) == 0){
-        $unique_id ="client". rand(time(),100);
-         $query = "INSERT INTO `register`(`unique_id`, `name`, `username`, `email`, `password`, `role_id`, `profile`, `phone`, `address`, `gender`, `data_reg`, `status`) VALUES
-        ('$unique_id','$firstname' , '$username','$email' , '$password',2 ,'avatar5.png' ,'$phone','$address' ,'$gender',$date,'pending')";
+        $unique_id ="lawyer-". rand(time(),100);
+        $q=$db_conn->query("INSERT INTO `job_request`( `lawyer_id` ) VALUES( '$unique_id')");
+        
+         $query = "INSERT INTO `register`(`unique_id`, `name`, `username`, `email`, `password`, `role_id`, `profile`, `phone`, `address`, `gender`, `data_reg`) VALUES
+        ('$unique_id','$firstname' , '$username','$email' , '$password',2 ,'avatar5.png' ,'$phone','$address' ,'$gender',NOW() )";
 
         $result = mysqli_query($db_conn, $query);
-
+            
         if($result){
             echo "<script>alert('You have successfully Applied')</script>";
                 $_SESSION["role_id"] = "2";
@@ -48,7 +50,7 @@ if(isset($_POST['apply'])){
                 $_SESSION["username"] = $username;
                 $_SESSION["unique_id"] = $unique_id;
                 $_SESSION["img"] = "avatar5.png";
-            header("Location:lawyer/index.php");
+            header("Location:lawyers/index.php");
         }else{
             echo "<script>alert('Failed')</script>";
         }
@@ -88,7 +90,7 @@ if(isset($error['apply'])){
                 <div>
                     <?php echo $show; ?>
                 </div>
-                <form method="POST">
+                <form method="POST" action="<?=$_SERVER["PHP_SELF"]?>">
                     <div class="form-group">
                         
                         <input type="text" name="fname" class="form-control" autocomplete="off" placeholder="Enter First Name" value="<?php if(isset($_POST['fname'])) echo $_POST['fname']; ?>"/>

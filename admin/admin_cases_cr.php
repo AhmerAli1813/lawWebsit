@@ -84,9 +84,12 @@ if(mysqli_num_rows($q) >0){
             <div class="row">
                 <div class="col-12 ">
                 <div class="form-group">
-                        <label>Minimal (.select2-danger)</label>
+                        <label> working</label>
                         <select class="form-control select2 select2-danger" name="status_edit" data-dropdown-css-class="select2-danger" style="width: 100%;">
-                        '.case_select_input().'
+                            <option>action</option>
+                            <option>pending</option>
+                            <option>approved</option>
+                            <option>rejected</option>
                         </select>
                         </div>
                         <!-- /.form-group -->

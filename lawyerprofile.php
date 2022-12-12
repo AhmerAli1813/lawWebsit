@@ -368,12 +368,8 @@ if(mysqli_num_rows($q2) >0){
                         
                         <div class=" col-sm-10 offset-sm-2">
                         <select style="height: 60px;" class="form-control select2 select2-danger" name="select_case" data-dropdown-css-class="select2-danger" style="width: 100%;">
-                        <option selected="selected">cases</option>
-                        <option>bunnies case </option>
-                        <option>marriage case </option>
-                        <option>divorce case</option>
-                        <option>loan cases</option>
-                        </select>
+                      <?php case_select_input() ?>  
+                      </select>
                         </div>
                         </div>
                       <div class="form-group row">

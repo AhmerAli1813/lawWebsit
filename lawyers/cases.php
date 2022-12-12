@@ -2,7 +2,9 @@
 include 'function.php';
 headers();
 include '../includes/config.php';
-$q = $db_conn->query("SELECT app_id ,C_id , client_name, case_type,date_booked, appointment_date, lawyer_status FROM `case_appointment` WHERE `L_id` = 'lawyer_003' AND `Admin_status` = 'approved' AND `lawyer_status` != 'deleted' ");
+
+$uq_id = $_SESSION['unique_id'];
+$q = $db_conn->query("SELECT app_id ,C_id , client_name, case_type,date_booked, appointment_date, lawyer_status FROM `case_appointment` WHERE `L_id` = '$uq_id' AND `Admin_status` = 'approved' AND `lawyer_status` != 'deleted' ");
 $output="";
 
 if(mysqli_num_rows($q) >0){
@@ -80,7 +82,11 @@ if(mysqli_num_rows($q) >0){
                 <div class="form-group">
                         <label>select cases</label>
                         <select class="form-control select2 select2-danger" name="status_edit" data-dropdown-css-class="select2-danger" style="width: 100%;">
-                        '.case_select_input().'
+                              <option>action</option>
+                              <option>pending</option>
+                              <option>accepted</option>
+                              <option>rejected</option>
+                        </select>
                         </div>
                         <!-- /.form-group -->
                 </div>

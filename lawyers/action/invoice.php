@@ -1,7 +1,7 @@
 <?php
 include "../../includes/config.php";
 
-if(mysqli_num_rows($q)){
+
         $q2=$db_conn->query("SELECT MAX(invoice_id) as last_inv FROM `income`");
         if(mysqli_num_rows($q2) >0){
 
@@ -32,6 +32,6 @@ if(mysqli_num_rows($q)){
                         echo "serve is slow";
                     }
         }
-}else{
+else{
     header("location:../appoint_acc.php?msg=error:you already make this invoice");   
 }

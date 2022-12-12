@@ -2,7 +2,8 @@
 include 'function.php';
 headers();
 include '../includes/config.php';
-$q = $db_conn->query("SELECT app_id ,C_id , client_name, case_type,date_booked, appointment_date, lawyer_status FROM `case_appointment` WHERE `L_id` = 'lawyer_003' AND `Admin_status` = 'approved' AND `lawyer_status` = 'rejected' ");
+$uq_id = $_SESSION['unique_id'];
+$q = $db_conn->query("SELECT app_id ,C_id , client_name, case_type,date_booked, appointment_date, lawyer_status FROM `case_appointment` WHERE `L_id` = '$uq_id' AND `Admin_status` = 'approved' AND `lawyer_status` = 'rejected' ");
 $output="";
 
 if(mysqli_num_rows($q) >0){

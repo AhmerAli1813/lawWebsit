@@ -54,7 +54,21 @@ function error404(){
 }
 function headers()
 {
-session_start();
+  session_start();
+  if(isset($_SESSION["role_id"])){
+    if($_SESSION["role_id"]!="1"){
+      header("Location:../login.php ");          
+    }else{
+
+      $userImg = $_SESSION["img"];
+      $userName = $_SESSION["Name"];
+    }
+    
+  }else{  
+
+    header("Location:../login.php ");          
+}
+
 error_reporting(0);
 
 
@@ -224,7 +238,17 @@ error_reporting(0);
                                </div>
                            </li>
                            <li class="nav-item  d-inline-block">
-                           <a href="#" class="nav-link">Ahmer</a>
+                           <!-- Sidebar user (optional) -->
+                                        <div class="  user-panel d-flex">
+                                            <a href="../profile.php?unique_id='.$_SESSION["unique_id"].'" class="image">
+                                            <img src="../dist/img/'.$userImg.'" class="img-circle elevation-2" alt="User Image">
+                                            </a>
+                                            <div class="info">
+                                            <a href="../profile.php?unique_id='.$_SESSION["unique_id"].'" class="d-block text-capitalize text-dark">'.$userName.'</a>
+                                            </div>
+                                            
+
+                                        </div>
                        </li>
                            </li>
                            <li class="nav-item  d-inline-block">
@@ -237,14 +261,40 @@ error_reporting(0);
                                         <!-- Main Sidebar Container -->
                                         <aside class="main-sidebar sidebar-dark-primary elevation-4">
                                         <!-- Brand Logo -->
-                                        <a href="index3.html" class="brand-link">
-                                          <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                                          <span class="brand-text font-weight-light">SMS Admin</span>
+                                        <a href="index.php" class="brand-link">
+                                        <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                                        <span class="brand-text font-weight-light">Law <span class="text-danger">.</span></span>
                                         </a>
-                                    
+
                                         <!-- Sidebar -->
                                         <div class="sidebar">
-                                    
+                                        <!-- Sidebar user (optional) -->
+                                        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                                            <a href="../profile.php?unique_id='.$_SESSION["unique_id"].'" class="image">
+                                            <img src="../dist/img/'.$userImg.'" class="img-circle elevation-2" alt="User Image">
+                                            </a>
+                                            <div class="info">
+                                            <a href="../profile.php?unique_id='.$_SESSION["unique_id"].'" class="d-block text-capitalize">'.$userName.'</a>
+                                            </div>
+                                            
+                                            <div class="info">
+                                            <a href="../logout.php?" class="d-block text-capitalize"><i class="fas fa-sign-out-alt"></i></a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- SidebarSearch Form -->
+                                        <div class="form-inline">
+                                            <div class="input-group" data-widget="sidebar-search">
+                                            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sidebar">
+                                                <i class="fas fa-search fa-fw"></i>
+                                                </button>
+                                            </div>
+                                            </div>
+                                        </div>
+
                                           <!-- Sidebar Menu -->
                                           <nav class="mt-2">
                                             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

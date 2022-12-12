@@ -156,7 +156,7 @@ if(mysqli_num_rows($q) >0){
                           <?php
                       }
                     }else{
-                      $row = "";
+                      $row = "no activity";
                     }
                     ?>
                     <!-- Post -->
