@@ -334,12 +334,12 @@ function error404(){
                             </div>
                             <div class="col-md-4 col-sm-6 text-center law-project animate-box" data-animate-effect="fadeIn">
                                 <a href="#"><img src="asset/images/project-3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                                    <h3>Read Bible</h3>
+                                    <h3>investment</h3>
                                     <span>Ptr. Jhon Doe</span>
                                 </a>
                             </div>
                             <div class="col-md-4 col-sm-6 text-center law-project animate-box" data-animate-effect="fadeIn">
-                                <a href="#"><img src="asset/images/project-4.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+                                <a href="#"><img src="asset/images/project-4.webp" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
                                     <h3>Affidavit</h3>
                                     <span>Atty. Boo Doe</span>
                                 </a>
