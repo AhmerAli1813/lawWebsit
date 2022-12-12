@@ -53,8 +53,7 @@ if(isset($_POST['create'])){
         }
     }
 }
-?>
-<?php
+
   include( "function.php");
     headers();
   
@@ -64,7 +63,7 @@ if(isset($_POST['create'])){
         <div class="row">
             <div class="col-md-3 p-0"></div>
             <div class="col-md-6 my-2 jumbotron">
-                <h5 class="text-center text-info my-2 mb-5">Create Account</h5>
+                <h2 class="text-center text-danger my-2 mb-5">Create Account</h2>
 
                 <form method="POST">
                     <div class="form-group mb-3">
@@ -111,7 +110,7 @@ if(isset($_POST['create'])){
                             <input type="password" name="con_pass" class="form-control" autocomplete="off" placeholder="Enter Confirm Password">
                         </div>
 
-                        <input type="submit" name="create" value="Create Account" class="btn btn-info">
+                        <input type="submit" name="create" value="Create Account" class="btn btn-danger">
 
                         <p class="text-right">I already have an account <a href="login.php">Click here</a></p>
                     </div>

@@ -13,15 +13,15 @@
 
                 <h5 class="text-center">Click on the button for more information.</h5>
                 <a href="#">
-                    <button class="btn btn-success my-5" style="margin-left: 20%;">More Information</button>
+                    <button class="btn btn-danger my-5" style="margin-left: 20%;">More Information</button>
                 </a>
             </div>
 
             <div class="col-md-4 mx-1 shadow">
-                <img src="asset/images/client.jpg" style="width: 100% ;">
+                <img src="asset/images/project-6.jpg" style="width: 100% ;">
                 <h5 class="text-center">Create Account so that we can take good Justice of you.</h5>
                 <a href="register.php">
-                    <button class="btn btn-success my-3" style="margin-left: 30%;">Create Account!!!</button>
+                    <button class="btn btn-danger my-3" style="margin-left: 30%;">Create Account!!!</button>
                 </a>
             </div>
 
@@ -29,7 +29,7 @@
                 <img src="asset/images/lawyer.jpg" style="width: 100% ;">
                 <h5 class="text-center">We are Employing for Lawyers</h5>
                 <a href="lawyerform.php">
-                    <button class="btn btn-success my-5" style="margin-left: 30%;">Apply Now!!!</button>
+                    <button class="btn btn-danger my-5" style="margin-left: 30%;">Apply Now!!!</button>
                 </a>
             </div>
         </div>

@@ -6,7 +6,6 @@ dataCount();
 choose();
 laws();
 Counseling();
-// Testimonials();
 advices();
 blogs();
 lawyers();

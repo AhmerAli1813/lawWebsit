@@ -53,13 +53,6 @@ if (isset($_POST['login'])){
         }
     }
 }
-
-
-
-
-?>
-
-    <?php
     include('function.php');
     headers();
     ?>
@@ -67,6 +60,9 @@ if (isset($_POST['login'])){
     <div style="margin-top: 20px;"></div>
 
     <div class="container" ">
+    <div class="row mb-5">
+        <div class="col text-center"><h2>Login Pages</h2></div>
+    </div>
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-3"></div>

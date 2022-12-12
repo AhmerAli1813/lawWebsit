@@ -2,6 +2,7 @@
 <?php
 include("includes/config.php");
 session_start();
+error_reporting(0);
 if(isset($_POST['apply'])){
 
      $firstname = $_POST['fname'];
@@ -65,20 +66,7 @@ if(isset($error['apply'])){
 }else{
     $show = "";
 }
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply Now!!!</title>
-</head>
-<body style="background-image: url(img/background.jpg); background-size:cover; background-repeat:no-repeat;">
-    <?php
-      include( "function.php");
+  include( "function.php");
       headers();
     ?>
 
@@ -86,7 +74,7 @@ if(isset($error['apply'])){
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6 my-3 jumbotron">
-                <h5 class="text-center mb-5 ">Apply Now!!!</h5>
+                <h2 class="text-center mb-5 ">Apply Now!!!</h2>
                 <div>
                     <?php echo $show; ?>
                 </div>

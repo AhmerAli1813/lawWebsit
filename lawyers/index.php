@@ -20,7 +20,7 @@ $uq_id = $_SESSION['unique_id'];
           </div>
         </div>
       </div><!-- /.container-fluid -->
-    </section>
+</section>
 
     <section class="content"> 
     <div class="row">

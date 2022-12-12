@@ -49,7 +49,7 @@ function error404(){
     <!-- /.error-page -->
     </section>
     <!-- /.content -->
-</div>';
+        </div>';
 }
    function headers(){
     
@@ -497,125 +497,66 @@ function error404(){
             </div>
         ';
  }
- function   lawyers2(){
-                echo '
-                <div id="law-about">
-                    <div class="container">
-                        <div class="row animate-box">
-                            <div class="col-md-8 col-md-offset-2 text-center law-heading">
-                                <h2>Our Attorneys</h2>
-                                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
-                                <div class="law-staff">
-                                    <img src="asset/images/user-2.jpg" alt="Free HTML5 Templates by gettemplates.co">
-                                    <h3>Jean Smith</h3>
-                                    <strong class="role">Counsel</strong>
-                                    <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-                                    <ul class="law-social-icons">
-                                        <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                        <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="icon-github"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
-                                <div class="law-staff">
-                                    <img src="asset/images/user-2.jpg" alt="Free HTML5 Templates by gettemplates.co">
-                                    <h3>Hush Raven</h3>
-                                    <strong class="role">Head of International Practice</strong>
-                                    <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-                                    <ul class="law-social-icons">
-                                        <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                        <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="icon-github"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
-                                <div class="law-staff">
-                                    <img src="asset/images/user-2.jpg" alt="Free HTML5 Templates by gettemplates.co">
-                                    <h3>Alex King</h3>
-                                    <strong class="role">Managing Partner, Attorney</strong>
-                                    <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-                                    <ul class="law-social-icons">
-                                        <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                        <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="icon-github"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>';
- }
+ 
  function lawyers(){
-    include 'includes/config.php';
-    echo ' <section class="law-about content mb-5  container">
-    
-    <div class="row animate-box">
-        <div class="col-md-8 col-md-offset-2 text-center law-heading">
-            <h2>Our Attorneys</h2>
-            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+        include 'includes/config.php';
+        echo ' <section class="law-about content mb-5  container">
+
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center law-heading">
+                <h2>Our Attorneys</h2>
+                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+            </div>
         </div>
-    </div>
-    <!-- Default box -->
-    <div class="card card-solid">
-    <div class="card-body pb-0">
-        <div class="row">';
+        <!-- Default box -->
+        <div class="card card-solid">
+        <div class="card-body pb-0">
+            <div class="row">';
 
-    $q=$db_conn->query("SELECT * FROM `lawyers`");
-    if(mysqli_num_rows($q) >0){
-        while($row =mysqli_fetch_assoc($q)){
-
-     
-
-            echo'<div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
-                <div class="card bg-light d-flex flex-fill">
-                <div class="card-header text-muted border-bottom-0">
-                    Digital Strategist
-                </div>
-                <div class="card-body pt-0">
-                    <div class="row">
-                    <div class="col-7">
-                        <h2 class="lead"><b>'.$row['name'].'</b></h2>
-                        <p class="text-muted text-sm"><b>About: </b> '.$row["about"].' </p>
-                        <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: '.$row['address'].'</li>
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: '.$row["phone"].'</li>
-                        </ul>
+        $q=$db_conn->query("SELECT * FROM `lawyers`");
+        if(mysqli_num_rows($q) >0){
+            while($row =mysqli_fetch_assoc($q)){
+                echo'<div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                    <div class="card bg-light d-flex flex-fill">
+                    <div class="card-header text-muted border-bottom-0">
+                        Digital Strategist
                     </div>
-                    <a href="lawyerprofile.php?unique_id='.$row['unique_id'].'" class="col-5 text-center">
-                        <img src="dist/img/'.$row['images'].'" alt="user-avatar" class="img-circle img-fluid">
-                    </a>
-                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                        <div class="col-7">
+                            <h2 class="lead"><b>'.$row['name'].'</b></h2>
+                            <p class="text-muted text-sm"><b>About: </b> '.$row["about"].' </p>
+                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                            <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: '.$row['address'].'</li>
+                            <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: '.$row["phone"].'</li>
+                            </ul>
+                        </div>
+                        <a href="lawyerprofile.php?unique_id='.$row['unique_id'].'" class="col-5 text-center">
+                            <img src="dist/img/'.$row['images'].'" alt="user-avatar" class="img-circle img-fluid">
+                        </a>
+                        </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="text-right">
+                            <a href="#" class="btn btn-sm bg-teal">
+                                <i class="fas fa-comments"></i>
+                            </a>
+                            <a href="lawyerprofile.php?unique_id='.$row['unique_id'].'" class="btn btn-sm btn-primary">
+                                <i class="fas fa-user"></i> View Profile
+                            </a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>';
+                    }
+                    }
+                    
+                    echo'</div>
                 </div>
-                <div class="card-footer">
-                    <div class="text-right">
-                    <a href="#" class="btn btn-sm bg-teal">
-                        <i class="fas fa-comments"></i>
-                    </a>
-                    <a href="lawyerprofile.php?unique_id='.$row['unique_id'].'" class="btn btn-sm btn-primary">
-                        <i class="fas fa-user"></i> View Profile
-                    </a>
-                    </div>
-                </div>
-                </div>
-            </div>';
-            }
-         }
-            
-            echo'</div>
-        </div>
-    </div>
-</section>
-';
- }
+            </div>
+            </section>
+            ';
+}
  function   advice_corousel(){
                 echo '<div id="law-started" style="background-image:url(asset/images/img_bg_2.jpg);">
                 <div class="overlay"></div>
@@ -634,12 +575,7 @@ function error404(){
                 </div>
             </div>';
  }
- function   login(){
-                echo '';
- }
- function   register(){
-                echo '';
- }
+ 
  function   footers(){
                 echo '	<footer id="law-footer" role="contentinfo">
                 <div class="container">
@@ -652,7 +588,7 @@ function error404(){
                             <h4>Navigation</h4>
                             <ul class="law-footer-links">
                                 <li><a href="index.php">Home</a></li>
-                                <li><a href="#">Practice Areas</a></li>
+                                <li><a href="#">Admin & lawyer Panels</a></li>
                                 <li><a href="#">Won Cases</a></li>
                                 <li><a href="contact.php">contact </a></li>
                                 <li><a href="about.php">About us</a></li>
@@ -662,10 +598,10 @@ function error404(){
                         <div class="col-md-3 col-md-push-1">
                             <h4>Contact Information</h4>
                             <ul class="law-footer-links">
-                                <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-                                <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
-                                <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-                                <li><a href="http://gettemplates.co">gettemplates.co</a></li>
+                                <li>Suite #103 , 1st floor , progressicve center , shahrah-e-faidal,karachi,pakistan</li>
+                                <li><a href="tel://111-278324">111-APTECH(278324)</a></li>
+                                <li><a href="mailto:aptech-education.com.pk">wwww.aptech-education.com.pk</a></li>
+                                
                             </ul>
                         </div>
         
@@ -683,8 +619,8 @@ function error404(){
                     <div class="row copyright">
                         <div class="col-md-12 text-center">
                             <p>
-                                <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-                                <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+                                <small class="block">&copy; 2022  law Website. All Rights Reserved.</small> 
+                                <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">Aptech SFC </a> Student: <a href="http://unsplash.co/" target="_blank">E-project</a></small>
                             </p>
                             <p>
                                 <ul class="law-social-icons">
