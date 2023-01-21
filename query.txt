@@ -1,3 +1,0 @@
-CREATE VIEW lawyers AS
-select `r`.`unique_id` AS `unique_id`,`r`.`name` AS `name`,`r`.`username` AS `username`,`r`.`email` AS `email`,`r`.`role_id` AS `role_id`,`roleTB`.`role_name` AS `role_name`,`r`.`phone` AS `phone`,`r`.`address` AS `address`,`jr`.`salary` AS `salary`,`r`.`gender` AS `gender`,`jr`.`status` AS `status`,`r`.`profile` AS `images`,`r`.`about` AS `about`,`r`.`data_reg` AS `data_reg` FROM register As r JOIN job_request As jr ON r.unique_id = jr.lawyer_id JOIN roles as roleTB ON r.role_id = roleTB.role_id JOIN eduction as edu ON r.edu_id = edu.edu_id
-WHERE r.role_id = 2
